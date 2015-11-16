@@ -1,0 +1,43 @@
+{
+  "name": "pca10000-gcc",
+  "version": "0.0.1",
+  "inherits": {
+    "nordic-nrf51822-16k-gcc": "jacobrosenthal/nordic-nrf51822-16k-gcc"
+  },
+  "description": "Unofficial mbed build target for the Nordic pca10000 v2 dongle.",
+  "licenses": [
+    {
+      "url": "https://spdx.org/licenses/Apache-2.0",
+      "type": "Apache-2.0"
+    }
+  ],
+  "keywords": [
+    "mbed-official",
+    "gcc"
+  ],
+  "similarTo": [
+    "mkit"
+  ],
+  "config": {
+    "hardware": {
+      "pins": {
+        "LED1": "p21",
+        "LED2": "p22",
+        "LED3": "p23",
+        "LED4": "p23",
+        "RX_PIN_NUMBER": "p11",
+        "TX_PIN_NUMBER": "p9",
+        "CTS_PIN_NUMBER": "p10",
+        "RTS_PIN_NUMBER": "p8"
+      }
+    }
+  },
+  "scripts": {
+    "debug": [
+      "valinor",
+      "--target",
+      "NRF51822",
+      "$program"
+    ]
+  }
+}
